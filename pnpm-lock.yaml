@@ -11,6 +11,9 @@ importers:
       '@maksiks/markdown-it-image-caption':
         specifier: ^1.0.10
         version: 1.0.10(markdown-it@14.1.0)
+      markdown-it:
+        specifier: ^14.1.0
+        version: 14.1.0
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^6.0.0
