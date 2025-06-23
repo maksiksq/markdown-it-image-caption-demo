@@ -1,7 +1,20 @@
+<script lang="ts">
+    import markdownit from 'markdown-it';
+    import mdtcapimg from '@maksiks/markdown-it-image-caption'
+
+    const md = $state(markdownit()
+        .use(mdtcapimg));
+
+    let textBoxContent = $state('hi');
+    const text = $derived(md.render(textBoxContent));
+</script>
+
 <main>
     <section>
-        <p>write something in here</p>
-        <textarea></textarea>
+        <p>✏️ write something in here</p>
+        <textarea bind:value={textBoxContent}></textarea>
+
+        <p>{@html text}</p>
     </section>
 </main>
 
@@ -37,7 +50,10 @@
             }
 
             textarea {
-                width: 100%;
+                margin-top: 10px;
+
+                width: 40vw;
+                height: 50vh;
             }
         }
     }
