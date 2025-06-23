@@ -12,7 +12,9 @@
 <main>
     <section class="edit">
         <p>✏️ Write something in here</p><br>
-        <p class="small">For example: <br> ![test](https://i.pinimg.com/originals/0b/12/8a/0b128adee2c032cd1ab8d7d970917361.gif 'Rendered 🎉!')</p>
+        <!-- Can't do it in Markdown because of my own plugin, funniest thing ever -->
+        <p class="small"> For example: <br> <code>![test](https://i.pinimg.com/originals/0b/12/8a/0b128adee2c032cd1ab8d7d970917361.gif
+            'Rendered 🎉!')</code></p>
         <textarea bind:value={textBoxContent}></textarea>
     </section>
     <section class="markdown">
@@ -57,6 +59,12 @@
 
             & .small {
                 font-size: 0.8rem;
+                color: black;
+                background: #ceffa5;
+                width: 100%;
+                border-radius: 4px;
+                padding: 6px 0 6px 6px;
+
             }
 
             & textarea {
@@ -75,12 +83,13 @@
                 font-weight: bold;
                 font-size: 1rem;
 
+
                 padding-bottom: 50px;
 
                 :global {
                     figure {
                         & img {
-                            width: 100%;
+                            max-width: 100%;
                         }
                     }
                 }
