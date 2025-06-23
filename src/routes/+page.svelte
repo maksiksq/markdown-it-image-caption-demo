@@ -5,7 +5,7 @@
     const md = $state(markdownit()
         .use(mdtcapimg));
 
-    let textBoxContent = $state('hi');
+    let textBoxContent = $state('hi i\'m writable');
     const text = $derived(md.render(textBoxContent));
 </script>
 
@@ -13,7 +13,7 @@
     <section class="edit">
         <p class="head">✏️ Write something in here</p><br>
         <!-- Can't do it in Markdown because of my own plugin, funniest thing ever -->
-        <p class="small"> For example: <br> <code>![test](https://i.pinimg.com/originals/0b/12/8a/0b128adee2c032cd1ab8d7d970917361.gif 'Rendered 🎉!')</code></p>
+        <p class="small"> Try: <br> <code>![test](https://i.pinimg.com/originals/0b/12/8a/0b128adee2c032cd1ab8d7d970917361.gif 'As shrimple as that 🦐!')</code></p>
         <textarea bind:value={textBoxContent}></textarea>
     </section>
     <section class="markdown">
