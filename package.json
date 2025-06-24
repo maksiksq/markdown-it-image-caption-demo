@@ -27,7 +27,7 @@
 		]
 	},
 	"dependencies": {
-		"@maksiks/markdown-it-image-caption": "^1.0.10",
+		"@maksiks/markdown-it-image-caption": "^1.1.2",
 		"markdown-it": "^14.1.0"
 	}
 }

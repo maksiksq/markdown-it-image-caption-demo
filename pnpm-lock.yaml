@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@maksiks/markdown-it-image-caption':
-        specifier: ^1.0.10
-        version: 1.0.10(markdown-it@14.1.0)
+        specifier: ^1.1.2
+        version: 1.1.2(markdown-it@14.1.0)
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -214,8 +214,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@maksiks/markdown-it-image-caption@1.0.10':
-    resolution: {integrity: sha512-WcpI5E1S4txRD4zkYbWKGa6WxJSCE+DEksQWJ+SZUyw/krUPP1KO3wBW+SgPaCJfDVY2AU23OZllrR1CQowLCg==}
+  '@maksiks/markdown-it-image-caption@1.1.2':
+    resolution: {integrity: sha512-/xLBUGJ374Ec4Lo25NhXl8ZoObQ+a8/U4VBMy6OYvODQRFvNAdHUZ4iB0Ry1N3stkDW+EVU3GMuH0DG9rJ71/A==}
     peerDependencies:
       markdown-it: '>=13'
 
@@ -699,7 +699,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@maksiks/markdown-it-image-caption@1.0.10(markdown-it@14.1.0)':
+  '@maksiks/markdown-it-image-caption@1.1.2(markdown-it@14.1.0)':
     dependencies:
       markdown-it: 14.1.0
 

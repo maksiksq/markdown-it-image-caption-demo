@@ -3,7 +3,9 @@
     import mdtcapimg from '@maksiks/markdown-it-image-caption'
 
     const md = $state(markdownit()
-        .use(mdtcapimg));
+        .use(mdtcapimg, {
+            allImgClasslist: '.fig',
+        }));
 
     let textBoxContent = $state('hi i\'m writable');
     const text = $derived(md.render(textBoxContent));
@@ -14,7 +16,8 @@
 </svelte:head>
 
 <div class="githubFloatie">
-    <a href="https://github.com/maksiksq/markdown-it-image-caption-demo" target="_blank" rel="noopener noreferrer">
+    <a title="GitHub repository" href="https://github.com/maksiksq/markdown-it-image-caption-demo" target="_blank"
+       rel="noopener noreferrer">
         <img src="/img/gitlogo.svg" alt="Github page link">
     </a>
 </div>
@@ -22,8 +25,7 @@
     <section class="edit">
         <p class="head">✏️ Write something in here</p><br>
         <!-- Can't do it in Markdown because of my own plugin, funniest thing ever  -->
-        <p class="small"> Try: <br> <code>![test](https://i.pinimg.com/originals/0b/12/8a/0b128adee2c032cd1ab8d7d970917361.gif
-            'Rendered 🎉!')</code></p>
+        <p class="small"> Try: <br> <code>![test](https://i.pinimg.com/originals/0b/12/8a/0b128adee2c032cd1ab8d7d970917361.gif 'Rendered 🎉!')</code></p>
         <textarea bind:value={textBoxContent}></textarea>
     </section>
     <section class="markdown">
@@ -128,8 +130,12 @@
 
                 padding: 16px 16px 50vh 16px;
 
+                & img {
+                    max-width: 100%;
+                }
+
                 :global {
-                    figure {
+                    .fig {
                         & img {
                             max-width: 100%;
                         }
